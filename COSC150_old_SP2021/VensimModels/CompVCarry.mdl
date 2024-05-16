@@ -1,0 +1,136 @@
+{UTF-8}
+birth fraction=
+	0.5
+	~	 [0,1,0.01]
+	~		|
+
+carrying capacity=
+	500
+	~	 [0,2000,100]
+	~		|
+
+change in rabbits per unit time=
+	birth fraction*rabbits*(1-rabbits/carrying capacity)
+	~	
+	~		|
+
+competition fraction=
+	0
+	~	 [0,0.01,0.0001]
+	~		|
+
+new birth fraction=
+	0.5
+	~	 [0,1,0.01]
+	~		|
+
+new change in rabbits per unit time=
+	new birth fraction*new rabbits - competition fraction*new rabbits*(new rabbits-1)/2
+	~	
+	~		|
+
+new rabbits= INTEG (
+	new change in rabbits per unit time,
+		10)
+	~	
+	~		|
+
+rabbits= INTEG (
+	change in rabbits per unit time,
+		10)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 25
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.03125
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,rabbits,372,214,40,20,3,3,0,0,0,0,0,0
+12,2,48,150,208,10,8,0,3,0,0,-1,0,0,0
+1,3,5,1,4,0,0,22,0,0,0,-1--1--1,,1|(292,208)|
+1,4,5,2,100,0,0,22,0,0,0,-1--1--1,,1|(200,208)|
+11,5,48,246,208,6,8,34,3,0,0,1,0,0,0
+10,6,change in rabbits per unit time,246,230,44,14,40,3,0,0,-1,0,0,0
+10,7,birth fraction,135,306,34,8,8,3,0,0,0,0,0,0
+10,8,carrying capacity,300,300,44,8,8,3,0,0,0,0,0,0
+1,9,7,6,1,0,0,0,0,64,0,-1--1--1,,1|(158,252)|
+1,10,8,6,1,0,0,0,0,64,0,-1--1--1,,1|(240,269)|
+1,11,1,6,1,0,0,0,0,64,0,-1--1--1,,1|(292,256)|
+12,12,0,667,283,198,176,3,188,0,0,1,0,0,0
+GRAPH
+10,13,new rabbits,373,421,40,20,3,3,0,0,0,0,0,0
+12,14,48,151,415,10,8,0,3,0,0,-1,0,0,0
+1,15,17,13,4,0,0,22,0,0,0,-1--1--1,,1|(293,415)|
+1,16,17,14,100,0,0,22,0,0,0,-1--1--1,,1|(201,415)|
+11,17,48,247,415,6,8,34,3,0,0,1,0,0,0
+10,18,new change in rabbits per unit time,247,437,52,14,40,3,0,0,-1,0,0,0
+10,19,new birth fraction,136,513,45,8,8,3,0,0,0,0,0,0
+10,20,competition fraction,301,507,51,8,8,3,0,0,0,0,0,0
+1,21,19,18,1,0,0,0,0,64,0,-1--1--1,,1|(159,459)|
+1,22,20,18,1,0,0,0,0,64,0,-1--1--1,,1|(241,476)|
+1,23,13,18,1,0,0,0,0,64,0,-1--1--1,,1|(293,463)|
+///---\\\
+:GRAPH GRAPH
+:X-AXIS Time
+:SCALE
+:VAR Rabbits
+:Y-MIN 0
+:Y-MAX 3000
+:LINE-WIDTH 2
+:VAR new rabbits
+:LINE-WIDTH 2
+:L<%^E!@
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+4:Time
+5:competition fraction
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:2
+41:0
+42:1
+24:0
+25:25
+26:25

@@ -1,0 +1,150 @@
+{UTF-8}
+cure rate=
+	0.14
+	~	 [0,0.5,0.005]
+	~		|
+
+death fraction=
+	0
+	~	 [0,1,0.005]
+	~		|
+
+die=
+	death fraction*Sick
+	~	
+	~		|
+
+fall ill=
+	infection fraction*Healthy*Sick
+	~	
+	~		|
+
+get better=
+	cure rate*Sick
+	~	
+	~		|
+
+Healthy= INTEG (
+	-fall ill,
+		1000)
+	~	
+	~		|
+
+infection fraction=
+	0
+	~	 [0,0.01,0.0001]
+	~		|
+
+Recovered= INTEG (
+	get better,
+		0)
+	~	
+	~		|
+
+Sick= INTEG (
+	fall ill-die-get better,
+		1)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 50
+	~	Day
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Day
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Day [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.03125
+	~	Day [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,Healthy,97,91,40,20,3,3,0,0,0,0,0,0
+10,2,Sick,291,87,40,20,3,3,0,0,0,0,0,0
+10,3,Recovered,495,81,40,20,3,3,0,0,0,0,0,0
+1,5,7,2,4,0,0,22,0,0,0,-1--1--1,,1|(210,89)|
+1,6,7,1,100,0,0,22,0,0,0,-1--1--1,,1|(147,89)|
+11,7,0,164,89,6,8,34,3,0,0,1,0,0,0
+10,8,fall ill,164,105,17,8,40,3,0,0,-1,0,0,0
+1,10,12,3,4,0,0,22,0,0,0,-1--1--1,,1|(419,84)|
+1,11,12,2,100,0,0,22,0,0,0,-1--1--1,,1|(351,84)|
+11,12,0,377,84,6,8,34,3,0,0,1,0,0,0
+10,13,get better,377,100,25,8,40,3,0,0,-1,0,0,0
+12,14,48,292,193,10,8,0,3,0,0,-1,0,0,0
+1,16,18,14,4,0,0,22,0,0,0,-1--1--1,,1|(292,168)|
+1,17,18,2,100,0,0,22,0,0,0,-1--1--1,,1|(292,123)|
+11,18,0,292,146,8,6,33,3,0,0,4,0,0,0
+10,19,die,310,146,10,8,40,3,0,0,-1,0,0,0
+1,20,1,8,1,0,0,0,0,64,0,-1--1--1,,1|(128,132)|
+1,21,2,8,1,0,0,0,0,64,0,-1--1--1,,1|(211,115)|
+1,22,2,13,1,0,0,0,0,64,0,-1--1--1,,1|(343,116)|
+1,23,2,18,1,0,0,0,0,64,0,-1--1--1,,1|(274,130)|
+10,24,infection fraction,148,164,44,8,8,3,0,0,0,0,0,0
+10,25,death fraction,358,186,35,8,8,3,0,0,0,0,0,0
+10,26,cure rate,414,120,23,8,8,3,0,0,0,0,0,0
+1,27,24,8,1,0,0,0,0,64,0,-1--1--1,,1|(172,139)|
+1,28,25,19,1,0,0,0,0,64,0,-1--1--1,,1|(312,153)|
+1,29,26,13,1,0,0,0,0,64,0,-1--1--1,,1|(407,103)|
+12,30,0,789,355,294,229,3,188,0,0,1,0,0,0
+GRAPH
+///---\\\
+:GRAPH GRAPH
+:TITLE  
+:X-AXIS Time
+:SCALE
+:VAR Healthy
+:Y-MIN 0
+:Y-MAX 1000
+:LINE-WIDTH 2
+:VAR Sick
+:LINE-WIDTH 2
+:VAR Recovered
+:LINE-WIDTH 2
+:L<%^E!@
+1:/Users/panoffrm/Downloads/Current.vdf
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:0,
+34:0,
+4:Time
+5:infection fraction
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:4
+41:0
+42:1
+24:0
+25:50
+26:50

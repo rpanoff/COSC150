@@ -1,0 +1,208 @@
+{UTF-8}
+dosage per day=
+	6000
+	~	 [0,18000,300]
+	~		|
+
+doses per day=
+	1
+	~	 [1,6,1]
+	~		|
+
+Intake=
+	Dosage*PULSE TRAIN( Start Time {start} , TIME STEP {duration} , "Every ? hours" {repeattime}\
+		 , End Time {end} )/TIME STEP
+	~	
+	~	this is the first time I ever used a pulse train. today anyway.
+	|
+
+Dosage=
+	dosage per day/doses per day
+	~	 [600,6000,300]
+	~		|
+
+"Every ? hours"=
+	24/doses per day
+	~	 [1,24,0.25]
+	~		|
+
+absorption=
+	Absorption rate constant*Medicine in Intestines
+	~	
+	~		|
+
+Absorption rate constant=
+	0.25
+	~	 [0,1,0.01]
+	~		|
+
+Blood Volume=
+	4.6
+	~	 [4,6,0.1]
+	~		|
+
+End Time=
+	48
+	~	
+	~		|
+
+excretion=
+	Excretion rate constant*Plasma Level
+	~	
+	~		|
+
+Excretion rate constant=
+	0.693/"Half-life"
+	~	
+	~		|
+
+"Half-life"=
+	6
+	~	 [3,8,0.25]
+	~		|
+
+Medicinal Level=
+	1000/1
+	~	
+	~		|
+
+Medicine in Intestines= INTEG (
+	Intake-absorption,
+		0)
+	~	
+	~		|
+
+Plasma Concentration=
+	Plasma Level/Blood Volume
+	~	
+	~		|
+
+Plasma Level= INTEG (
+	absorption-excretion,
+		0)
+	~	
+	~		|
+
+Start Time=
+	0
+	~	
+	~		|
+
+Toxic Level=
+	1200/1
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 48
+	~	Hour
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Hour
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Hour [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.125
+	~	Hour [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,5,0
+10,1,Medicine in Intestines,342,193,37,15,3,131,0,0,0,0,0,0
+10,2,Plasma Level,525,194,38,17,3,131,0,0,0,0,0,0
+12,3,48,157,193,10,8,0,3,0,0,-1,0,0,0
+1,4,6,1,4,0,0,22,0,0,0,-1--1--1,,1|(258,194)|
+1,5,6,3,100,0,0,22,0,0,0,-1--1--1,,1|(184,194)|
+11,6,48,206,194,5,6,34,3,0,0,1,0,0,0
+10,7,Intake,206,208,16,8,40,3,0,0,-1,0,0,0
+1,8,10,2,4,0,0,22,0,0,0,-1--1--1,,1|(455,192)|
+1,9,10,1,100,0,0,22,0,0,0,-1--1--1,,1|(396,192)|
+11,10,172,419,192,5,6,34,3,0,0,1,0,0,0
+10,11,absorption,419,206,26,8,40,3,0,0,-1,0,0,0
+12,12,48,709,194,10,8,0,3,0,0,-1,0,0,0
+1,13,15,12,4,0,0,22,0,0,0,-1--1--1,,1|(655,194)|
+1,14,15,2,100,0,0,22,0,0,0,-1--1--1,,1|(582,194)|
+11,15,48,606,194,5,6,34,3,0,0,1,0,0,0
+10,16,excretion,606,208,23,8,40,3,0,0,-1,0,0,0
+10,17,Toxic Level,200,488,29,8,8,3,0,0,0,0,0,0
+10,18,Medicinal Level,211,517,51,8,8,131,0,0,0,0,0,0
+10,19,Plasma Concentration,473,129,36,18,8,131,0,0,0,0,0,0
+10,20,Blood Volume,326,124,35,8,8,3,0,0,0,0,0,0
+10,21,Start Time,158,236,26,8,8,3,0,0,0,0,0,0
+10,22,"Every ? hours",248,266,46,7,8,131,0,0,0,0,0,0
+10,23,End Time,169,267,36,9,8,131,0,0,0,0,0,0
+10,24,Dosage,306,288,19,8,8,3,0,0,0,0,0,0
+10,25,Absorption rate constant,384,273,38,14,8,3,0,0,0,0,0,0
+10,26,Excretion rate constant,596,267,34,14,8,3,0,0,0,0,0,0
+10,27,"Half-life",585,342,31,7,8,131,0,0,0,0,0,0
+1,28,20,19,0,0,0,0,0,64,0,-1--1--1,,1|(392,125)|
+1,29,2,19,1,0,0,0,0,64,0,-1--1--1,,1|(510,150)|
+1,30,26,16,1,0,0,0,0,64,0,-1--1--1,,1|(619,241)|
+1,31,2,16,1,0,0,0,0,64,0,-1--1--1,,1|(562,227)|
+1,32,27,26,1,0,0,0,0,64,0,-1--1--1,,1|(568,309)|
+1,33,25,11,1,0,0,0,0,64,0,-1--1--1,,1|(419,243)|
+1,34,1,11,1,0,0,0,0,64,0,-1--1--1,,1|(371,224)|
+1,35,24,7,1,0,0,0,0,64,0,-1--1--1,,1|(273,230)|
+1,36,21,7,1,0,0,0,0,64,0,-1--1--1,,1|(166,222)|
+1,37,22,7,1,0,0,0,0,64,0,-1--1--1,,1|(234,244)|
+1,38,23,7,1,0,0,0,0,64,0,-1--1--1,,1|(180,257)|
+10,39,TIME STEP,187,140,38,8,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,40,39,7,1,0,0,0,0,64,0,-1--1--1,,1|(209,162)|
+12,41,0,890,397,209,178,3,188,0,0,1,0,0,0
+medicine_concentration
+10,42,dosage per day,364,350,37,8,8,3,0,0,0,0,0,0
+10,43,doses per day,276,323,41,8,8,131,0,0,0,0,0,0
+1,44,42,24,1,0,0,0,0,64,0,-1--1--1,,1|(342,312)|
+1,45,43,24,0,0,0,0,0,64,0,-1--1--1,,1|(285,310)|
+1,46,43,22,1,0,0,0,0,64,0,-1--1--1,,1|(220,298)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 2
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,5,0
+///---\\\
+:GRAPH medicine_concentration
+:TITLE medicine concentration
+:X-AXIS Time
+:SCALE
+:VAR Plasma Concentration
+:Y-MIN 0
+:Y-MAX 2000
+:LINE-WIDTH 2
+:VAR Medicinal Level
+:VAR Toxic Level
+:L<%^E!@
+9:Current
+23:0
+15:0,0,0,0,0,0
+19:5,0
+27:2,
+34:0,
+4:Time
+5:TIME STEP
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:2
+41:0
+42:0
+24:0
+25:48
+26:48

@@ -1,0 +1,178 @@
+<html>
+<head><title>Event Differences Across Different Platforms</title></head>
+<P>
+<H1>Event Differences Across Different Platforms</H1>
+<P>
+<H3>WIN = Microsoft Windows - MAC = Apple Macintosh - SUN = Solaris2.x
+<H3>NN3.0 = Netscape Navigator - SDK = Microsoft SDK - JDK = Java Developers Kit - IE3.0 = Microsoft Internet Explorer
+<H4>copied from Java AWT Reference, O'Reilly, John Zukowski, pp1004-1008
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=2>
+<CAPTION>Button</CAPTION>
+<TR><TH>Event vs Platform<TH>WIN/NN3.0<TH>MAC/NN3.0<TH>SUN/NN3.0<TH>WIN/SDK<TH>WIN/JDK<TH>MAC/JDK<TH>SUN/JDK<TH>WIN/IE3.0
+<TR><TH>KEY_PRESS<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>KEY_RELEASE<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>KEY_ACTION<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>KEY_ACTION_RELEASE<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>MOUSE_DOWN<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_UP<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_MOVE<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_ENTER<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_EXIT<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_DRAG<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>ACTION_EVENT<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>GOT_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+<TR><TH>LOST_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+</TABLE>
+<P>
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=2 WIDTH=90%>
+<CAPTION>Canvas</CAPTION>
+<TR><TH>Event vs Platform<TH>WIN/NN3.0<TH>MAC/NN3.0<TH>SUN/NN3.0<TH>WIN/SDK<TH>WIN/JDK<TH>MAC/JDK<TH>SUN/JDK<TH>WIN/IE3.0
+<TR><TH>KEY_PRESS<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>*****<TD>Y
+<TR><TH>KEY_RELEASE<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>*****<TD>Y
+<TR><TH>KEY_ACTION<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>*****<TD>Y
+<TR><TH>KEY_ACTION_RELEASE<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y
+<TR><TH>MOUSE_DOWN<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>MOUSE_UP<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>MOUSE_MOVE<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>MOUSE_ENTER<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>MOUSE_EXIT<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>MOUSE_DRAG<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>ACTION_EVENT<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>GOT_FOCUS<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>*****<TD>Y
+<TR><TH>LOST_FOCUS<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>*****<TD>Y
+</TABLE>
+<P>
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=2 WIDTH=90%>
+<CAPTION>Checkbox</CAPTION>
+<TR><TH>Event vs Platform<TH>WIN/NN3.0<TH>MAC/NN3.0<TH>SUN/NN3.0<TH>WIN/SDK<TH>WIN/JDK<TH>MAC/JDK<TH>SUN/JDK<TH>WIN/IE3.0
+<TR><TH>KEY_PRESS<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>KEY_RELEASE<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>KEY_ACTION<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>KEY_ACTION_RELEASE<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>MOUSE_DOWN<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_UP<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_MOVE<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_ENTER<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_EXIT<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_DRAG<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>ACTION_EVENT<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>GOT_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>Y
+<TR><TH>LOST_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>Y
+</TABLE>
+<P>
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=2 WIDTH=90%>
+<CAPTION>Choice</CAPTION>
+<TR><TH>Event vs Platform<TH>WIN/NN3.0<TH>MAC/NN3.0<TH>SUN/NN3.0<TH>WIN/SDK<TH>WIN/JDK<TH>MAC/JDK<TH>SUN/JDK<TH>WIN/IE3.0
+<TR><TH>KEY_PRESS<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y
+<TR><TH>KEY_RELEASE<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y
+<TR><TH>KEY_ACTION<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y
+<TR><TH>KEY_ACTION_RELEASE<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y
+<TR><TH>MOUSE_DOWN<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_UP<TD>Y<TD>*****<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_MOVE<TD>Y<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_ENTER<TD>Y<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_EXIT<TD>Y<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_DRAG<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>ACTION_EVENT<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>GOT_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>LOST_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+</TABLE>
+<P>
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=2 WIDTH=90%>
+<CAPTION>Label</CAPTION>
+<TR><TH>Event vs Platform<TH>WIN/NN3.0<TH>MAC/NN3.0<TH>SUN/NN3.0<TH>WIN/SDK<TH>WIN/JDK<TH>MAC/JDK<TH>SUN/JDK<TH>WIN/IE3.0
+<TR><TH>KEY_PRESS<TD>Y<TD>*****<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+<TR><TH>KEY_RELEASE<TD>Y<TD>*****<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+<TR><TH>KEY_ACTION<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+<TR><TH>KEY_ACTION_RELEASE<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+<TR><TH>MOUSE_DOWN<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_UP<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_MOVE<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_ENTER<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_EXIT<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_DRAG<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>ACTION_EVENT<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>GOT_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>LOST_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+</TABLE>
+<P>
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=2 WIDTH=90%>
+<CAPTION>List</CAPTION>
+<TR><TH>Event vs Platform<TH>WIN/NN3.0<TH>MAC/NN3.0<TH>SUN/NN3.0<TH>WIN/SDK<TH>WIN/JDK<TH>MAC/JDK<TH>SUN/JDK<TH>WIN/IE3.0
+<TR><TH>KEY_PRESS<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>KEY_RELEASE<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>KEY_ACTION<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>KEY_ACTION_RELEASE<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>MOUSE_DOWN<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_UP<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_MOVE<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_ENTER<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_EXIT<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_DRAG<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>LIST_SELECT<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>LIST_DESELECT<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>ACTION_EVENT<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>GOT_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+<TR><TH>LOST_FOCUS<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+</TABLE>
+<P>
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=2 WIDTH=90%>
+<CAPTION>Scrollbar</CAPTION>
+<TR><TH>Event vs Platform<TH>WIN/NN3.0<TH>MAC/NN3.0<TH>SUN/NN3.0<TH>WIN/SDK<TH>WIN/JDK<TH>MAC/JDK<TH>SUN/JDK<TH>WIN/IE3.0
+<TR><TH>KEY_PRESS<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>KEY_RELEASE<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>KEY_ACTION<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>KEY_ACTION_RELEASE<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_DOWN<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_UP<TD>*****<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_MOVE<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_ENTER<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_EXIT<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_DRAG<TD>*****<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>SCROLL_LINE_UP<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>SCROLL_LINE_DOWN<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>SCROLL_PAGE_UP<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>SCROLL_PAGE_DOWN<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>SCROLL_ABSOLUTE<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>ACTION_EVENT<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>GOT_FOCUS<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+<TR><TH>LOST_FOCUS<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****
+</TABLE>
+<P>
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=2 WIDTH=90%>
+<CAPTION>TextArea</CAPTION>
+<TR><TH>Event vs Platform<TH>WIN/NN3.0<TH>MAC/NN3.0<TH>SUN/NN3.0<TH>WIN/SDK<TH>WIN/JDK<TH>MAC/JDK<TH>SUN/JDK<TH>WIN/IE3.0
+<TR><TH>KEY_PRESS<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>KEY_RELEASE<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>KEY_ACTION<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>KEY_ACTION_RELEASE<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>MOUSE_DOWN<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_UP<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_MOVE<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_ENTER<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_EXIT<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_DRAG<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>ACTION_EVENT<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>GOT_FOCUS<TD>Y<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****
+<TR><TH>LOST_FOCUS<TD>Y<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****
+</TABLE>
+<P>
+<TABLE BORDER=3 CELLSPACING=0 CELLPADDING=2 WIDTH=90%>
+<CAPTION>TextField</CAPTION>
+<TR><TH>Event vs Platform<TH>WIN/NN3.0<TH>MAC/NN3.0<TH>SUN/NN3.0<TH>WIN/SDK<TH>WIN/JDK<TH>MAC/JDK<TH>SUN/JDK<TH>WIN/IE3.0
+<TR><TH>KEY_PRESS<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>KEY_RELEASE<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>KEY_ACTION<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>KEY_ACTION_RELEASE<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y<TD>*****<TD>Y<TD>Y
+<TR><TH>MOUSE_DOWN<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_UP<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>MOUSE_MOVE<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_ENTER<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_EXIT<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>Y<TD>*****<TD>*****
+<TR><TH>MOUSE_DRAG<TD>Y<TD>Y<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****<TD>*****
+<TR><TH>ACTION_EVENT<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y<TD>Y
+<TR><TH>GOT_FOCUS<TD>Y<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****
+<TR><TH>LOST_FOCUS<TD>Y<TD>Y<TD>Y<TD>*****<TD>*****<TD>Y<TD>Y<TD>*****
+</TABLE>
+<P>
+</html>

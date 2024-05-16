@@ -1,0 +1,151 @@
+{UTF-8}
+birth fraction=
+	0.5
+	~	 [0,1,0.01]
+	~		|
+
+Bunnies= INTEG (
+	Making Bunnies-bunnies expire-grow up,
+		0)
+	~	
+	~		|
+
+bunnies expire=
+	expiration fraction*Bunnies
+	~	
+	~		|
+
+expiration fraction=
+	0
+	~	 [0,1,0.01]
+	~		|
+
+grow up=
+	growth factor*Bunnies
+	~	
+	~		|
+
+growth factor=
+	0.25
+	~	 [0,1,0.05]
+	~		|
+
+Making Bunnies=
+	birth fraction*Rabbits from Bunnies
+	~	
+	~		|
+
+Rabbits from Bunnies= INTEG (
+	grow up,
+		10)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 25
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.0625
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,Rabbits from Bunnies,518,280,40,20,3,3,0,0,0,0,0,0,0,0,0,0,0,0
+10,2,Bunnies,299,280,40,20,3,3,0,0,0,0,0,0,0,0,0,0,0,0
+1,3,5,1,4,0,0,22,0,0,0,-1--1--1,,1|(445,276)|
+1,4,5,2,100,0,0,22,0,0,0,-1--1--1,,1|(369,276)|
+11,5,222,406,276,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,6,grow up,406,292,22,8,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+12,7,48,136,280,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,8,10,2,4,0,0,22,0,0,0,-1--1--1,,1|(233,280)|
+1,9,10,7,100,0,0,22,0,0,0,-1--1--1,,1|(171,280)|
+11,10,48,202,280,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,11,Making Bunnies,202,296,42,8,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,12,1,11,1,0,0,0,0,64,0,-1--1--1,,1|(309,385)|
+1,13,2,6,1,0,0,0,0,64,0,-1--1--1,,1|(364,322)|
+10,14,growth factor,424,332,35,8,8,3,0,0,0,0,0,0,0,0,0,0,0,0
+1,15,14,6,0,0,0,0,0,64,0,-1--1--1,,1|(418,318)|
+10,16,birth fraction,146,350,34,8,8,3,0,0,0,0,0,0,0,0,0,0,0,0
+1,17,16,11,1,0,0,0,0,64,0,-1--1--1,,1|(164,314)|
+12,18,48,299,102,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,19,21,18,4,0,0,22,0,0,0,-1--1--1,,1|(299,144)|
+1,20,21,2,100,0,0,22,0,0,0,-1--1--1,,1|(299,225)|
+11,21,48,299,185,8,6,33,3,0,0,4,0,0,0,0,0,0,0,0,0
+10,22,bunnies expire,344,185,37,8,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,23,2,22,1,0,0,0,0,64,0,-1--1--1,,1|(344,218)|
+10,24,expiration fraction,393,139,47,8,8,3,0,0,0,0,0,0,0,0,0,0,0,0
+1,25,24,22,1,0,0,0,0,64,0,-1--1--1,,1|(372,164)|
+12,26,0,775,259,150,150,3,44,0,0,1,0,0,0,0,0,0,0,0,0
+GRAPH
+///---\\\
+:GRAPH GRAPH
+:TITLE GRAPH
+:X-AXIS Time
+:SCALE
+:VAR Rabbits from Bunnies
+:Y-MIN 0
+:Y-MAX 3000
+:LINE-WIDTH 2
+:VAR Bunnies
+:LINE-WIDTH 2
+:L<%^E!@
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+42:1
+72:0
+73:0
+4:Time
+5:expiration fraction
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:2
+41:0
+76:0
+77:0
+78:0
+79:0
+80:0
+81:0
+24:0
+25:25
+26:25
+87:0
+75:
+43:

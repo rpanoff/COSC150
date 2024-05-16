@@ -1,0 +1,171 @@
+{UTF-8}
+predator birth fraction=
+	0.01
+	~	 [0,0.05,0.001]
+	~		|
+
+predator births=
+	(predator birth fraction*Prey Population)*Predator Population
+	~	
+	~		|
+
+predator death proportionality constant=
+	1
+	~	 [0,2,0.01]
+	~		|
+
+predator deaths=
+	predator death proportionality constant*Predator Population
+	~	
+	~		|
+
+Predator Population= INTEG (
+	predator births-predator deaths,
+		15)
+	~	
+	~		|
+
+prey birth fraction=
+	1
+	~	 [0,5,0.1]
+	~		|
+
+prey births=
+	prey birth fraction*Prey Population
+	~	
+	~		|
+
+prey death proportionality constant=
+	0.035
+	~	 [0,0.05,0.001]
+	~		|
+
+prey deaths=
+	(prey death proportionality constant*Predator Population)*Prey Population
+	~	
+	~		|
+
+Prey Population= INTEG (
+	prey births-prey deaths,
+		100)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 12
+	~	seasons
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	seasons
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	seasons [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.03125
+	~	seasons [0.001,0.04,0.001]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,5,0
+10,1,Prey Population,407,74,40,20,3,3,0,0,0,0,0,0
+10,2,Predator Population,404,296,40,20,3,3,0,0,0,0,0,0
+12,3,48,105,73,8,6,0,3,0,0,-1,0,0,0
+1,4,6,1,4,0,0,22,0,0,0,-1--1--1,,1|(307,74)|
+1,5,6,3,100,0,0,22,0,0,0,-1--1--1,,1|(173,74)|
+11,6,48,241,74,6,8,34,3,0,0,1,0,0,0
+10,7,prey births,241,94,34,11,40,3,0,0,-1,0,0,0
+12,8,48,666,76,8,6,0,3,0,0,-1,0,0,0
+1,9,11,8,4,0,0,22,0,0,0,-1--1--1,,1|(608,76)|
+1,10,11,1,100,0,0,22,0,0,0,-1--1--1,,1|(496,76)|
+11,11,48,551,76,6,8,34,3,0,0,1,0,0,0
+10,12,prey deaths,551,95,37,11,40,3,0,0,-1,0,0,0
+12,13,48,111,296,8,6,0,3,0,0,-1,0,0,0
+1,14,16,2,4,0,0,22,0,0,0,-1--1--1,,1|(306,296)|
+1,15,16,13,100,0,0,22,0,0,0,-1--1--1,,1|(177,296)|
+11,16,48,242,296,6,8,34,3,0,0,1,0,0,0
+10,17,predator births,242,314,47,11,40,3,0,0,-1,0,0,0
+12,18,48,663,296,8,6,0,3,0,0,-1,0,0,0
+1,19,21,18,4,0,0,22,0,0,0,-1--1--1,,1|(605,296)|
+1,20,21,2,100,0,0,22,0,0,0,-1--1--1,,1|(493,296)|
+11,21,48,548,296,6,8,34,3,0,0,1,0,0,0
+10,22,predator deaths,548,314,50,11,40,3,0,0,-1,0,0,0
+10,23,prey birth fraction,139,179,56,11,8,3,0,0,0,0,0,0
+10,24,predator birth fraction,139,428,66,20,8,3,0,0,0,0,0,0
+10,25,prey death proportionality constant,624,182,75,19,8,3,0,0,0,0,0,0
+10,26,predator death proportionality constant,633,424,76,28,8,3,0,0,0,0,0,0
+1,27,23,7,0,0,0,0,0,64,0,-1--1--1,,1|(185,140)|
+1,28,1,7,1,0,0,0,0,64,0,-1--1--1,,1|(324,101)|
+1,29,1,17,1,0,0,0,0,64,0,-1--1--1,,1|(301,178)|
+1,30,1,12,1,0,0,0,0,64,0,-1--1--1,,1|(471,110)|
+1,31,25,12,0,0,0,0,0,64,0,-1--1--1,,1|(588,138)|
+1,32,2,12,1,0,0,0,0,64,0,-1--1--1,,1|(504,214)|
+1,33,26,22,0,0,0,0,0,64,0,-1--1--1,,1|(587,365)|
+1,34,2,22,1,0,0,0,0,64,0,-1--1--1,,1|(465,341)|
+1,35,2,17,1,0,0,0,0,64,0,-1--1--1,,1|(335,341)|
+1,36,24,17,0,0,0,0,0,64,0,-1--1--1,,1|(191,370)|
+12,37,0,223,29,36,8,8,4,0,0,-1,0,0,0
+Predator-Prey
+12,38,0,492,34,36,14,8,4,0,0,-1,0,0,0
+Predator-prey simulation
+12,39,0,994,161,150,150,3,44,0,0,1,0,0,0
+Population
+12,40,0,995,488,150,150,3,44,0,0,1,0,0,0
+Phases
+10,41,TIME STEP,371,528,38,8,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+///---\\\
+:GRAPH Population
+:TITLE Population
+:X-AXIS Time
+:SCALE
+:VAR Predator Population
+:Y-MIN 0
+:Y-MAX 200
+:LINE-WIDTH 2
+:VAR Prey Population
+:Y-MIN 0
+:Y-MAX 200
+:LINE-WIDTH 2
+
+:GRAPH Phases
+:TITLE Phases
+:X-AXIS Prey Population
+:SCALE
+:VAR Predator Population
+:Y-MIN 0
+:Y-MAX 200
+:LINE-WIDTH 2
+:L<%^E!@
+9:Current
+23:0
+15:0,0,0,1,0,0
+19:5,0
+27:2,
+34:0,
+4:Time
+5:predator death proportionality constant
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:2
+41:0
+42:0
+24:0
+25:12
+26:12
